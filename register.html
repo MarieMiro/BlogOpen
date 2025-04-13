@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Регистрация | BlogOpen</title>
+  <style>
+    body {
+      background-color: #1c1c1c;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      background: rgba(255, 165, 0, 0.1);
+      padding: 30px;
+      border-radius: 10px;
+      width: 350px;
+    }
+    input, select, button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      background-color: #ff7f00;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e07000;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="registerForm">
+    <h2>Регистрация</h2>
+    <input type="text" name="companyName" placeholder="Наименование компании" required>
+    <input type="text" name="representative" placeholder="ФИО представителя" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Пароль" required>
+    <input type="text" name="industry" placeholder="Сфера деятельности" required>
+    <input type="text" name="inn" placeholder="ИНН" required>
+    <button type="submit">Зарегистрироваться</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('registerForm');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const data = {
+        companyName: formData.get('companyName'),
+        representative: formData.get('representative'),
+        email: formData.get('email'),
+        password: formData.get('password'),
+        industry: formData.get('industry'),
+        inn: formData.get('inn')
+      };
+
+      fetch('https://script.google.com/macros/s/AKfycbzfLCer1WQBVZt9-khuwPBtlk4qbhN2lGlgt0iNKupf8F6JWbI5g8PUqB_HsdoaZBZ9/exec', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(res => res.json())
+      .then(res => {
+        if (res.status === 'success') {
+          alert('Вы успешно зарегистрировались!');
+          form.reset();
+        } else {
+          alert('Ошибка при регистрации. Попробуйте снова.');
+        }
+      })
+      .catch(error => {
+        console.error('Ошибка:', error);
+        alert('Сервер не отвечает.');
+      });
+    });
+  </script>
+
+</body>
+</html>
+
