@@ -130,10 +130,16 @@
 
 /* Прокручивающийся текст сверху */
 .scrolling-text {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  height: 60px;
+  position: absolute;
+  top: 30px;
+  padding-bottom: 40px; /* добавляем немного пространства снизу */
+  width: 200%;
+  font-size: 48px;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  white-space: nowrap;
+  animation: scrollText 10s ease-in-out infinite alternate;
 }
 
 .scrolling-text-inner {
