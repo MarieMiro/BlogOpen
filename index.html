@@ -85,24 +85,31 @@
 </section>
 
 
-  <!-- Блок "Новости" -->
-<section class="news-section">
-  <div class="container py-5">
-    <h2 class="news-title text-start mb-5">Новости</h2>
-    <div class="news-item fade-in">
-      <h4>Открытие платформы BlogOpen</h4>
-      <p>Мы официально запустились! Добро пожаловать в комьюнити, где блогеры и бренды находят друг друга.</p>
-    </div>
-    <div class="news-item fade-in">
-      <h4>Новые функции</h4>
-      <p>Теперь вы можете фильтровать партнёров по нише, количеству подписчиков и географии.</p>
-    </div>
-    <div class="news-item fade-in">
-      <h4>Безопасные сделки</h4>
-      <p>Мы добавили систему безопасных платежей. Ваши деньги под защитой!</p>
+ <!-- Блок "Новости" -->
+<section class="news">
+  <div class="container">
+    <div class="news-title text-end">НОВОСТИ</div>
+
+    <div class="news-items d-flex flex-wrap justify-content-between">
+      <div class="news-card">
+        <div class="news-heading">Открытие платформы</div>
+        <div class="news-content">Мы официально запустились и готовы соединять блогеров и бренды!</div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-heading">Новые функции</div>
+        <div class="news-content">Добавлены фильтры по тематике, аудитории и бюджету — ищи партнёров проще.</div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-heading">Безопасные сделки</div>
+        <div class="news-content">Внедрена система безопасных платежей через платформу.</div>
+      </div>
     </div>
   </div>
 </section>
+
+
   <script>
   // Анимация появления при скролле
   const observer = new IntersectionObserver(entries => {
