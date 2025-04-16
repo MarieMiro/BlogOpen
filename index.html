@@ -76,7 +76,24 @@
     </div>
   </div>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Блок "Новости" -->
+<section class="news-section">
+  <div class="container py-5">
+    <h2 class="news-title text-start mb-5">Новости</h2>
+    <div class="news-item fade-in">
+      <h4>Открытие платформы BlogOpen</h4>
+      <p>Мы официально запустились! Добро пожаловать в комьюнити, где блогеры и бренды находят друг друга.</p>
+    </div>
+    <div class="news-item fade-in">
+      <h4>Новые функции</h4>
+      <p>Теперь вы можете фильтровать партнёров по нише, количеству подписчиков и географии.</p>
+    </div>
+    <div class="news-item fade-in">
+      <h4>Безопасные сделки</h4>
+      <p>Мы добавили систему безопасных платежей. Ваши деньги под защитой!</p>
+    </div>
+  </div>
+</section>
   <script>
   // Анимация появления при скролле
   const observer = new IntersectionObserver(entries => {
@@ -89,5 +106,6 @@
 
   document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
