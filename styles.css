@@ -170,4 +170,47 @@
   line-height: 1.8;
   text-align: left;
 }
+/* Блок "Новости" */
+.news {
+  background-color: #1c1c1c; /* тот же фон, что и у остального сайта */
+  padding: 100px 20px;
+}
+
+.news-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 60px;
+  margin-right: 60px;
+}
+
+.news-items {
+  gap: 30px;
+}
+
+.news-card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  background-color: transparent;
+  border: 2px solid rgba(93, 95, 239, 0.3); /* рамка синяя */
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+}
+
+.news-heading {
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffb347; /* как цвет иконок */
+  margin-bottom: 10px;
+}
+
+.news-content {
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+}
+
+
   </style>
