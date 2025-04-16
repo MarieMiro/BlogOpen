@@ -130,22 +130,30 @@
 
 /* Прокручивающийся текст сверху */
 .scrolling-text {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 60px;
+}
+
+.scrolling-text-inner {
   position: absolute;
-  top: 30px;
-  width: 200%;
+  white-space: nowrap;
   font-size: 48px;
   font-weight: bold;
   color: transparent;
   -webkit-text-stroke: 1px white;
-  white-space: nowrap;
-  animation: scrollText 10s ease-in-out infinite alternate;
+  animation: scrollLeftRight 16s ease-in-out infinite alternate;
 }
 
-@keyframes scrollText {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+@keyframes scrollLeftRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-30%);
+  }
 }
-
 .about-text {
   max-width: 800px;
   margin: 0 auto;
