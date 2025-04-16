@@ -99,14 +99,30 @@
 }
 
 .about-card {
-  background-color: rgba(93, 95, 239, 0.15); /* прозрачный цвет с фиолетово-синим подтоном */
-  padding: 20px 25px;
-  border-radius: 12px;
+  background-color: rgba(93, 95, 239, 0.1); /* светло-прозрачный синий */
+  border-left: 4px solid #5d5fef;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.7;
   color: white;
-  font-size: 18px;
-  line-height: 1.6;
-  box-shadow: 0 0 10px rgba(93, 95, 239, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+/* Анимация появления */
+.about-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Картинка справа, "прилипшая" */
+.sticky-image {
+  max-height: 600px;
+  object-fit: cover;
+  position: sticky;
+  top: 120px;
 }
     .scrolling-text {
       position: absolute;
