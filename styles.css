@@ -78,13 +78,14 @@
       color: white;
     }
 
-    /* Блок "О нас" */
-    .about {
-      background-color: #1c1c1c;
-      padding: 120px 20px;
-      position: relative;
-      overflow: hidden;
-    }
+   /* Блок "О нас" */
+.about {
+  background-color: #1c1c1c;
+  padding: 120px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
 .about-title {
   font-size: 50px;
   font-weight: bold;
@@ -99,7 +100,7 @@
 }
 
 .about-card {
-  background-color: rgba(255, 179, 71, 0.15);
+  background-color: rgba(93, 95, 239, 0.15); /* синий с фиолетовым подтоном */
   border-radius: 15px;
   padding: 20px 25px;
   margin-bottom: 20px;
@@ -112,42 +113,11 @@
   backdrop-filter: blur(4px);
 }
 
-/* Плавное появление */
+/* Убрана анимация */
 .about-icon {
   font-size: 28px;
   color: #ffb347;
   margin-left: 20px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-/* Анимация при наведении */
-.about-icon:hover {
-  animation: wiggle 0.6s ease infinite;
-}
-
-/* Появление снизу */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Покачивание */
-@keyframes wiggle {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(5deg); }
-  50% { transform: rotate(-5deg); }
-  75% { transform: rotate(5deg); }
-  100% { transform: rotate(0deg); }
-}
-
-/* Анимация появления */
-.about-card.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Картинка справа, "прилипшая" */
@@ -157,30 +127,30 @@
   position: sticky;
   top: 120px;
 }
-    .scrolling-text {
-      position: absolute;
-      top: 30px;
-      width: 200%;
-      font-size: 48px;
-      font-weight: bold;
-      color: transparent;
-      -webkit-text-stroke: 1px white;
-      white-space: nowrap;
-      animation: scrollText 10s ease-in-out infinite alternate;
-    }
 
-    @keyframes scrollText {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+/* Прокручивающийся текст сверху */
+.scrolling-text {
+  position: absolute;
+  top: 30px;
+  width: 200%;
+  font-size: 48px;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  white-space: nowrap;
+  animation: scrollText 10s ease-in-out infinite alternate;
+}
 
-   
-    .about-text {
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 18px;
-      line-height: 1.8;
-      text-align: left;
-    }
+@keyframes scrollText {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
+.about-text {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: left;
+}
   </style>
