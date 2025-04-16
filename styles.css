@@ -92,14 +92,21 @@
   margin-bottom: 50px;
 }
 
-.about-box {
-  background-color: rgba(93, 95, 239, 0.15); /* светлый прозрачный оранжевый */
-  border-radius: 15px;
-  padding: 30px;
+.about-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-card {
+  background-color: rgba(93, 95, 239, 0.15); /* прозрачный цвет с фиолетово-синим подтоном */
+  padding: 20px 25px;
+  border-radius: 12px;
   color: white;
   font-size: 18px;
-  line-height: 1.7;
-  backdrop-filter: blur(4px);
+  line-height: 1.6;
+  box-shadow: 0 0 10px rgba(93, 95, 239, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
     .scrolling-text {
       position: absolute;
