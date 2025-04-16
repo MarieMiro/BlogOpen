@@ -51,7 +51,7 @@
   background-color: #1c1c1c;
   text-align: center;
   padding: 140px 20px 100px;
-  min-height: 600px; /* добавляет высоту блока */
+  min-height: 800px; /* добавляет высоту блока */
 }
 
     .logo {
