@@ -1,26 +1,5 @@
 <style>
-.lightning-divider {
-  height: 4px;
-  width: 100%;
-  background: linear-gradient(270deg, #5d5fef, #8390ff, #5d5fef);
-  background-size: 600% 600%;
-  animation: lightningGlow 3s ease infinite;
-  box-shadow: 0 0 10px #5d5fef, 0 0 20px #8390ff;
-  margin: 60px 0; /* отступ сверху и снизу */
-}
 
-/* Анимация перелива */
-@keyframes lightningGlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
     body {
       margin: 0;
       background-color: #1c1c1c;
@@ -102,7 +81,28 @@
       background-color: #ffb347;
       color: white;
     }
+.lightning-divider {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(270deg, #5d5fef, #8390ff, #5d5fef);
+  background-size: 600% 600%;
+  animation: lightningGlow 3s ease infinite;
+  box-shadow: 0 0 10px #5d5fef, 0 0 20px #8390ff;
+  margin: 60px 0; /* отступ сверху и снизу */
+}
 
+/* Анимация перелива */
+@keyframes lightningGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
    /* Блок "О нас" */
 .about {
   background-color: #1c1c1c;
