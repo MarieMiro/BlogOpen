@@ -85,26 +85,21 @@
   background-color: #1c1c1c;
   padding: 30px 0;
 }
+/* Анимированная синяя "молния" */
 .lightning-divider {
   height: 4px;
-  width: 100%;
-  background: linear-gradient(270deg, #5d5fef, #8390ff, #5d5fef);
-  background-size: 600% 600%;
-  animation: lightningGlow 3s ease infinite;
-  box-shadow: 0 0 10px #5d5fef, 0 0 20px #8390ff;
-  margin: 60px 0; /* отступ сверху и снизу */
+  background: linear-gradient(90deg, #5d5fef, #ffffff, #5d5fef);
+  background-size: 200% auto;
+  animation: lightning-glow 3s linear infinite;
+  border-radius: 2px;
 }
 
-/* Анимация перелива */
-@keyframes lightningGlow {
+@keyframes lightning-glow {
   0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
+    background-position: 0% center;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 200% center;
   }
 }
    /* Блок "О нас" */
