@@ -13,7 +13,7 @@
 
   .about-title,
   .news-title {
-    font-size: 28px;
+    font-size: 32px;
     text-align: center;
   }
 
@@ -116,6 +116,12 @@
       margin-bottom:30px;
       letter-spacing: 3px;
     }
+    @media (max-width: 576px) {
+        .logo {
+            font-size: 48px;
+        }
+    }
+    
 
     .btn-register {
       margin-top: 30px;
@@ -189,7 +195,14 @@
   align-items: center;
   backdrop-filter: blur(4px);
 }
-
+.about-card.no-bg {
+  background: none;
+  backdrop-filter: none;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 22px;
+}
 /* Убрана анимация */
 .about-icon {
   font-size: 28px;
