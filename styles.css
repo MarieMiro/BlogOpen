@@ -81,6 +81,10 @@
       background-color: #ffb347;
       color: white;
     }
+.divider-section {
+  background-color: #1c1c1c;
+  padding: 30px 0;
+}
 .lightning-divider {
   height: 4px;
   width: 100%;
