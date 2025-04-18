@@ -163,13 +163,12 @@
 }
 .like-section {
   position: relative;
-  display: inline-block;
 }
 
 .like-btn {
   font-size: 18px;
   padding: 10px 20px;
-  z-index: 2;
+  z-index: 1;
   position: relative;
 }
 
