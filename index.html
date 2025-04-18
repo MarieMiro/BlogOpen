@@ -148,31 +148,36 @@
   newsItems.forEach(item => observer.observe(item));
 </script>
   <script>
-  const likeButton = document.getElementById('likeButton');
-  const likeCountElement = document.getElementById('likeCount');
-  const flash = document.getElementById('flash');
-  const scriptURL = "https://script.google.com/macros/s/AKfycbxeLPzpKZxNhZ6ZlLMkt0JToOYUyaDTrz0LvMINh3BIBgphPjJJXNDFi8TFNpJ8BH3Fcw/exec";
+  window.addEventListener('DOMContentLoaded', () => {
+    const likeButton = document.getElementById('likeButton');
+    const likeCountElement = document.getElementById('likeCount');
+    const flash = document.getElementById('flash');
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxeLPzpKZxNhZ6ZlLMkt0JToOYUyaDTrz0LvMINh3BIBgphPjJJXNDFi8TFNpJ8BH3Fcw/exec";
 
-  // Получить текущий счётчик при загрузке
-  fetch(scriptURL)
-    .then(res => res.json())
-    .then(data => {
-      likeCountElement.textContent = data.count;
-    });
-
-  // Клик по кнопке
-  likeButton.addEventListener('click', () => {
-    fetch(scriptURL, { method: 'POST' })
+    // Получение текущего количества лайков
+    fetch(scriptURL)
       .then(res => res.json())
       .then(data => {
-        likeCountElement.textContent = data.count;
-        flash.classList.add('flash-active');
-        setTimeout(() => flash.classList.remove('flash-active'), 300);
+        if (data && data.count !== undefined) {
+          likeCountElement.textContent = data.count;
+        }
       });
+
+    // Увеличение лайков
+    likeButton.addEventListener('click', () => {
+      fetch(scriptURL, { method: 'POST' })
+        .then(res => res.json())
+        .then(data => {
+          if (data && data.count !== undefined) {
+            likeCountElement.textContent = data.count;
+
+            flash.classList.add('flash-active');
+            setTimeout(() => flash.classList.remove('flash-active'), 300);
+          }
+        });
+    });
   });
 </script>
-
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
