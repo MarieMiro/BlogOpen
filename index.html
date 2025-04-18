@@ -37,35 +37,12 @@
 <section class="hero">
   <div class="logo">BlogOpen</div>
   <div class="like-section text-center mt-4">
-  <button id="likeButton" class="btn btn-warning like-btn">Нажмите, если понравился проект</button>
-  <div class="flash-effect" id="flash"></div>
-  <p class="like-count mt-2">Понравилось: <span id="likeCount">0</span></p>
-</div>
-<script>
-const likeButton = document.getElementById('likeButton');
-const likeCountElement = document.getElementById('likeCount');
-const flash = document.getElementById('flash');
-const scriptURL = "https://script.google.com/macros/s/AKfycbxeLPzpKZxNhZ6ZlLMkt0JToOYUyaDTrz0LvMINh3BIBgphPjJJXNDFi8TFNpJ8BH3Fcw/exec"; // вставь сюда свой URL
+    <button id="likeButton" class="btn btn-warning like-btn">Нажмите, если понравился проект</button>
+    <div class="flash-effect" id="flash"></div>
+    <p class="like-count mt-2">Понравилось: <span id="likeCount">0</span></p>
+  </div>
 
-// Получить текущий счётчик при загрузке
-fetch(scriptURL)
-  .then(res => res.json())
-  .then(data => {
-    likeCountElement.textContent = data.count;
-  });
-
-// Клик по кнопке
-likeButton.addEventListener('click', () => {
-  fetch(scriptURL, { method: 'POST' })
-    .then(res => res.json())
-    .then(data => {
-      likeCountElement.textContent = data.count;
-
-      flash.classList.add('flash-active');
-      setTimeout(() => flash.classList.remove('flash-active'), 300);
-    });
-});
-</script>
+</section>
 
 <!-- Кнопка регистрации 
 <button onclick="window.open('register.html', '_blank', 'width=500,height=600')"
@@ -170,6 +147,32 @@ likeButton.addEventListener('click', () => {
 
   newsItems.forEach(item => observer.observe(item));
 </script>
+  <script>
+  const likeButton = document.getElementById('likeButton');
+  const likeCountElement = document.getElementById('likeCount');
+  const flash = document.getElementById('flash');
+  const scriptURL = "https://script.google.com/macros/s/AKfycbxeLPzpKZxNhZ6ZlLMkt0JToOYUyaDTrz0LvMINh3BIBgphPjJJXNDFi8TFNpJ8BH3Fcw/exec";
+
+  // Получить текущий счётчик при загрузке
+  fetch(scriptURL)
+    .then(res => res.json())
+    .then(data => {
+      likeCountElement.textContent = data.count;
+    });
+
+  // Клик по кнопке
+  likeButton.addEventListener('click', () => {
+    fetch(scriptURL, { method: 'POST' })
+      .then(res => res.json())
+      .then(data => {
+        likeCountElement.textContent = data.count;
+        flash.classList.add('flash-active');
+        setTimeout(() => flash.classList.remove('flash-active'), 300);
+      });
+  });
+</script>
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
