@@ -162,15 +162,8 @@
           likeCountElement.textContent = data.count;
         }
       });
-// Обработка нажатия на кнопку лайка
-  likeButton.addEventListener('click', () => {
-    fetch(scriptURL, { method: 'POST' })
-      .then(res => res.json())
-      .then(data => {
-        if (data && data.count !== undefined) {
-          likeCountElement.textContent = data.count;
 
-  //Увеличение лайков
+    // Увеличение лайков
     likeButton.addEventListener('click', () => {
       fetch(scriptURL, { method: 'POST' })
         .then(res => res.json())
@@ -179,7 +172,7 @@
             likeCountElement.textContent = data.count;
 
             flash.classList.add('flash-active');
-            setTimeout(() => flash.classList.remove('flash-active'), 300);-->
+            setTimeout(() => flash.classList.remove('flash-active'), 300);
           }
         });
     });
