@@ -147,5 +147,20 @@
   newsItems.forEach(item => observer.observe(item));
 </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  let likeCount = 0;
+
+  document.getElementById('likeButton').addEventListener('click', () => {
+    likeCount++;
+    document.getElementById('likeCount').textContent = likeCount;
+
+    const flash = document.getElementById('flash');
+    flash.classList.add('flash-active');
+
+    setTimeout(() => {
+      flash.classList.remove('flash-active');
+    }, 300);
+  });
+</script>
 </body>
 </html>
