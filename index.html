@@ -162,7 +162,7 @@
           likeCountElement.textContent = data.count;
         }
       });
-
+        
     // Увеличение лайков
     likeButton.addEventListener('click', () => {
       fetch(scriptURL, { method: 'POST' })
@@ -172,10 +172,24 @@
             likeCountElement.textContent = data.count;
 
             flash.classList.add('flash-active');
-            setTimeout(() => flash.classList.remove('flash-active'), 300);
+              setTimeout(() => flash.classList.remove('flash-active'), 300);
+             createHeart();
+            //setTimeout(() => flash.classList.remove('flash-active'), 300);
           }
         });
     });
+    function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart'); // Случайный сдвиг по горизонтали (влево/вправо от центра)
+    const offset = Math.random() * 60 - 30;
+    heart.style.left = calc(50% + ${offset}px);
+
+    flash.appendChild(heart);
+
+    // Удаляем сердечко через 1 секунду
+    setTimeout(() => {
+      heart.remove();
+    }, 1000);
   });
 </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
