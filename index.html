@@ -170,33 +170,7 @@
         if (data && data.count !== undefined) {
           likeCountElement.textContent = data.count;
 
-          // Вспышка
-          flash.classList.add('flash-active');
-          setTimeout(() => flash.classList.remove('flash-active'), 300);
-
-          // Добавляем сердечко
-          createHeart();
-        }
-      });
-  });
-
-  function createHeart() {
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-
-    // Случайный сдвиг по горизонтали (влево/вправо от центра)
-    const offset = Math.random() * 60 - 30;
-    heart.style.left = calc(50% + ${offset}px);
-
-    flash.appendChild(heart);
-
-    // Удаляем сердечко через 1 секунду
-    setTimeout(() => {
-      heart.remove();
-    }, 1000);
-  }
-});
-    // Увеличение лайков
+  //Увеличение лайков
     likeButton.addEventListener('click', () => {
       fetch(scriptURL, { method: 'POST' })
         .then(res => res.json())
@@ -205,7 +179,7 @@
             likeCountElement.textContent = data.count;
 
             flash.classList.add('flash-active');
-            setTimeout(() => flash.classList.remove('flash-active'), 300);
+            setTimeout(() => flash.classList.remove('flash-active'), 300);-->
           }
         });
     });
