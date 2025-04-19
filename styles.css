@@ -153,6 +153,7 @@ position: relative;
   height: 4px;
   margin-top: 80px; /* отступ сверху — регулируй по вкусу */
   background: linear-gradient(90deg, #5d5fef, #ffffff, #5d5fef);
+  background-color: #1c1c1c;
   background-size: 200% auto;
   animation: lightning-glow 3s linear infinite;
   border-radius: 2px;
