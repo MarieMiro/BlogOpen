@@ -6,7 +6,7 @@
       color: white;
       font-family: 'Segoe UI', sans-serif;
     }
-@media (max-width: 775px) {
+@media (max-width: 768px) {
   .logo {
     font-size: 42px;
   }
@@ -25,6 +25,7 @@
     padding: 80px 10px;
     background-color: #1c1c1c;
     position: relative;
+    width: 100%
   }
 
   .about-card {
