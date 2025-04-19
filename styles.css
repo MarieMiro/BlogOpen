@@ -289,10 +289,13 @@
 
 .about-text {
   max-width: 800px;
-  margin: 0 auto;
   font-size: 18px;
   line-height: 1.8;
-  text-align: left;
+  text-align: center; /* по горизонтали */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* по центру */
+  height: 100%;
 }
 /* Блок "Новости" */
 .news {
