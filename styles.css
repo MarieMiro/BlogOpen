@@ -146,7 +146,9 @@
 }
 /* Анимированная синяя "молния" */
 .lightning-divider {
+  width: 100vw; /* ширина во всю ширину окна */
   height: 4px;
+  margin-top: 80px; /* отступ сверху — регулируй по вкусу */
   background: linear-gradient(90deg, #5d5fef, #ffffff, #5d5fef);
   background-size: 200% auto;
   animation: lightning-glow 3s linear infinite;
