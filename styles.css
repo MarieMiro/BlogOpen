@@ -23,6 +23,8 @@
 
   .hero {
     padding: 80px 10px;
+    background-color: #1c1c1c;
+    position: relative;
   }
 
   .about-card {
