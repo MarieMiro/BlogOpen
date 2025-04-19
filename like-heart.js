@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const heart = document.createElement('div');
     heart.classList.add('heart');
     const offset = Math.random() * 60 - 30;
-    heart.style.left = calc(50% + ${offset}px);
+    heart.style.left = `calc(50% + ${offset}px)`;
     flashContainer.appendChild(heart);
     setTimeout(() => heart.remove(), 1000);
   }
