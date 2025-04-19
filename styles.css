@@ -287,15 +287,29 @@
 }
 
 
-.about-text {
-  max-width: 800px;
-  font-size: 18px;
-  line-height: 1.8;
-  text-align: center; /* по горизонтали */
-  display: flex;
-  align-items: center;
-  justify-content: center; /* по центру */
-  height: 100%;
+@media (max-width: 768px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-text p {
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .about-icon {
+    margin-top: 15px;
+    margin-left: 0;
+  }
 }
 /* Блок "Новости" */
 .news {
