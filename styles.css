@@ -108,6 +108,7 @@
   text-align: center;
   padding: 140px 20px 100px;
   min-height: 650px; /* добавляет высоту блока */
+position: relative;
 }
 
     .logo {
