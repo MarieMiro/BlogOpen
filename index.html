@@ -38,7 +38,6 @@
   <div class="logo">BlogOpen</div>
   <div class="like-section text-center mt-4">
     <button id="likeButton" class="btn btn-warning like-btn">Нажмите, если понравился проект</button>
-    <div class="flash-effect" id="flash"></div>
     <p class="like-count mt-2">Понравилось: <span id="likeCount">0</span></p>
   </div>
 
@@ -172,29 +171,11 @@
           if (data && data.count !== undefined) {
             likeCountElement.textContent = data.count;
 
-            flash.classList.add('flash-active');
-            setTimeout(() => flash.classList.remove('flash-active'), 300);
-            createHeart();
+           // flash.classList.add('flash-active');
+            //setTimeout(() => flash.classList.remove('flash-active'), 300)
           }
         });
     });
-
-    function createHeart() {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-
-      // Случайный сдвиг по горизонтали
-      const offset = Math.random() * 60 - 30;
-      heart.style.left = calc(50% + ${offset}px);
-
-      // Добавление в контейнер
-      flash.appendChild(heart);
-
-      // Удаление после анимации
-      setTimeout(() => {
-        heart.remove();
-      }, 1000);
-    }
   });
 </script>
 </body>
