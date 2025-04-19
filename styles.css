@@ -59,7 +59,7 @@
   .navbar-nav .nav-link {
     padding: 10px 0;
   }
-}
+
     /* Навигация */
     .navbar {
       background-color: #5d5fef;
@@ -162,8 +162,8 @@
   }
 .like-section {
   position: relative;
+ }
 }
-
 .like-btn {
   font-size: 18px;
   padding: 10px 20px;
