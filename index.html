@@ -36,7 +36,7 @@
 <section class="hero">
   <div class="logo">BlogOpen</div>
   <div class="like-section text-center mt-4">
-    <button id="likeButton" class="btn btn-warning like-btn">Нажмите, если понравился проект</button>
+    <button id="likeButton" class="btn btn-warning like-btn" onclick="changeColor(this)">Нажмите, если понравился проект</button>
     <p class="like-count mt-2">Понравилось: <span id="likeCount">0</span></p>
   </div>
 </section>
@@ -118,32 +118,6 @@
   </div>
 </section>
 
-
-  <script>
-  // Анимация появления при скролле
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  });
-
-  document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-</script>
-  <script>
-  const newsItems = document.querySelectorAll('.fade-in');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  newsItems.forEach(item => observer.observe(item));
-</script>
    <script>
   window.addEventListener('DOMContentLoaded', () => {
     const likeButton = document.getElementById('likeButton');
