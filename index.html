@@ -38,24 +38,6 @@
   <div class="like-section text-center mt-4">
     <button id="likeButton" class="btn btn-warning like-btn">Нажмите, если понравился проект</button>
     <p class="like-count mt-2">Понравилось: <span id="likeCount">0</span></p>
-     <script>
-    const likeButton = document.getElementById('likeButton');
-    button.addEventListener('click', (e) => {
-      const heart = document.createElement('div');
-      heart.className = 'heart';
-      heart.innerHTML = '❤';
-
-      const rect = button.getBoundingClientRect();
-      heart.style.left = rect.left + rect.width / 2 + 'px';
-      heart.style.top = rect.top + window.scrollY + 'px';
-
-      document.body.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 2000);
-    });
-  </script>
   </div>
 </section>
    <div class="lightning-divider"></div>
@@ -145,6 +127,34 @@
     count++;
     likeCount.textContent = count;
     likeBtn.classList.add('clicked');
+  });
+</script>
+  <script>
+  const likeButton = document.getElementById('likeButton');
+  const likeCount = document.getElementById('likeCount');
+  let count = 0;
+
+  likeButton.addEventListener('click', (e) => {
+    // Увеличение счётчика
+    count++;
+    likeCount.textContent = count;
+
+    // Создание сердечка
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerHTML = '❤️';
+
+    // Позиционирование сердечка
+    const rect = likeButton.getBoundingClientRect();
+    heart.style.left = rect.left + rect.width / 2 + 'px';
+    heart.style.top = rect.top + window.scrollY + 'px';
+
+    document.body.appendChild(heart);
+
+    // Удаление сердечка через 2 секунды
+    setTimeout(() => {
+      heart.remove();
+    }, 2000);
   });
 </script>
    <script>
