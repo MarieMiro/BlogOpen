@@ -237,20 +237,14 @@ button {
   color: #ffb347;
   margin-left: 20px;
 }
-.about-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
+/* Картинка справа, "прилипшая" */
+.sticky-image {
+  max-height: 600px;
+  object-fit: cover;
+  position: sticky;
+  top: 120px;
+  margin-right:0;
 }
-
-.about-image-wrapper {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: flex-end;
-  width: 60%;
-}
-
 
 /* Прокручивающийся текст сверху */
 .scrolling-text {
