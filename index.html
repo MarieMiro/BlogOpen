@@ -159,7 +159,17 @@
     const heart = document.createElement('div');
     heart.className = 'heart';
     heart.innerHTML = '❤️';
-  
+  // Позиционирование сердечка
+    const rect = likeButton.getBoundingClientRect();
+    heart.style.left = rect.left + rect.width / 2 + 'px';
+    heart.style.top = rect.top + window.scrollY + 'px';
+      
+    document.body.appendChild(heart);
+
+    // Удаление сердечка через 2 секунды
+    setTimeout(() => {
+      heart.remove();
+    }, 2000);
     });
     
   });
