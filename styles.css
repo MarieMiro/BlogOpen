@@ -203,6 +203,23 @@ button {
   font-size: 16px;
   color: white;
 }
+.heart-animation {
+  position: absolute;
+  font-size: 40px;
+  color: red;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.6s ease;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.heart-animation.show {
+  opacity: 1;
+  transform: scale(1.5) translateY(-50px);
+}
+
+
    /* Блок "О нас" */
 .about {
   background-color: #1c1c1c;
