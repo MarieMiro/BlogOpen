@@ -1,4 +1,5 @@
- // CSS для анимации
+// CSS для анимации
+<style>
 const style = document.createElement('style');
 style.textContent = `
   #flash-container {
@@ -48,8 +49,9 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
-
+</style>
 // JS логика
+<script>
 document.addEventListener('DOMContentLoaded', () => {
   const likeButton = document.getElementById('likeButton');
   const likeCount = document.getElementById('likeCount');
@@ -86,3 +88,4 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => heart.remove(), 1000);
   }
 });
+</script>
