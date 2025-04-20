@@ -181,17 +181,6 @@ button {
 .clicked {
     background-color:5d5fef !important;
   }
-.heart-animation {
-  position: absolute;
-  font-size: 40px;
-  color: red;
-  opacity: 0;
-  transform: scale(0.5);
-  transition: all 0.6s ease;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .flash-active {
   transform: translate(-50%, -50%) scale(1.5);
   opacity: 0.8;
