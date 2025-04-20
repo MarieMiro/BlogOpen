@@ -117,7 +117,17 @@
     </div>
   </div>
 </section>
+<script>
+  const likeBtn = document.getElementById('likeButton');
+  const likeCount = document.getElementById('likeCount');
+  let count = 0;
 
+  likeBtn.addEventListener('click', () => {
+    count++;
+    likeCount.textContent = count;
+    likeBtn.classList.add('clicked');
+  });
+</script>
    <script>
   window.addEventListener('DOMContentLoaded', () => {
     const likeButton = document.getElementById('likeButton');
