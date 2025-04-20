@@ -248,16 +248,9 @@ button {
   flex-shrink: 0;
   display: flex;
   justify-content: flex-end;
-  width: 40%;
+  width: 60%;
 }
 
-/* Картинка справа, "прилипшая" */
-.sticky-image {
-  max-height: 600px;
-  object-fit: cover;
-  position: sticky;
-  top: 120px;
-}
 
 /* Прокручивающийся текст сверху */
 .scrolling-text {
