@@ -178,12 +178,10 @@ button {
   z-index: 1;
   position: relative;
 }
-.clicked {
-    background-color:5d5fef !important;
-  }
-.flash-active {
-  transform: translate(-50%, -50%) scale(1.5);
-  opacity: 0.8;
+.like-btn.clicked {
+  background-color: #5d5fef !important;
+  color: white !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .like-count {
