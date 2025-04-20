@@ -129,34 +129,7 @@
     likeBtn.classList.add('clicked');
   });
 </script>
-  <script>
-  const likeButton = document.getElementById('likeButton');
-  const likeCount = document.getElementById('likeCount');
-  let count = 0;
-
-  likeButton.addEventListener('click', (e) => {
-    // Увеличение счётчика
-    count++;
-    likeCount.textContent = count;
-
-    // Создание сердечка
-    const heart = document.createElement('div');
-    heart.className = 'heart';
-    heart.innerHTML = '❤️';
-
-    // Позиционирование сердечка
-    const rect = likeButton.getBoundingClientRect();
-    heart.style.left = rect.left + rect.width / 2 + 'px';
-    heart.style.top = rect.top + window.scrollY + 'px';
-
-    document.body.appendChild(heart);
-
-    // Удаление сердечка через 2 секунды
-    setTimeout(() => {
-      heart.remove();
-    }, 2000);
-  });
-</script>
+ 
    <script>
   window.addEventListener('DOMContentLoaded', () => {
     const likeButton = document.getElementById('likeButton');
@@ -182,7 +155,13 @@
             likeCountElement.textContent = data.count;
           }
         });
+       // Создание сердечка
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerHTML = '❤️';
+  
     });
+    
   });
 </script>
   
