@@ -178,7 +178,9 @@ button {
   z-index: 1;
   position: relative;
 }
-
+.clicked {
+    background-color: red !important;
+  }
 .flash-effect {
   position: absolute;
   top: 50%;
