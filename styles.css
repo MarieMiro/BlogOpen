@@ -237,6 +237,19 @@ button {
   color: #ffb347;
   margin-left: 20px;
 }
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.about-image-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;
+}
 
 /* Картинка справа, "прилипшая" */
 .sticky-image {
