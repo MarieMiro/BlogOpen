@@ -155,26 +155,34 @@
             likeCountElement.textContent = data.count;
           }
         });
-       // Создание сердечка
+    });
+  });
+</script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  const likeButton = document.getElementById('likeButton');
+
+  likeButton.addEventListener('click', (e) => {
+  
+
+    // Создание сердечка
     const heart = document.createElement('div');
     heart.className = 'heart';
     heart.innerHTML = '❤️';
-  // Позиционирование сердечка
+
+    // Позиционирование сердечка
     const rect = likeButton.getBoundingClientRect();
     heart.style.left = rect.left + rect.width / 2 + 'px';
     heart.style.top = rect.top + window.scrollY + 'px';
-      
+
     document.body.appendChild(heart);
 
     // Удаление сердечка через 2 секунды
     setTimeout(() => {
       heart.remove();
     }, 2000);
-    });
-    
   });
 </script>
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
