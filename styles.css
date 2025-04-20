@@ -188,7 +188,23 @@ button {
   font-size: 16px;
   color: white;
 }
+.heart {
+      position: absolute;
+      color: red;
+      font-size: 24px;
+      animation: fly 2s ease-out forwards;
+    }
 
+    @keyframes fly {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-150px) scale(1.5);
+      }
+    }
    /* Блок "О нас" */
 .about {
   background-color: #1c1c1c;
