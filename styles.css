@@ -65,7 +65,7 @@
 }
     /* Навигация */
     .navbar {
-      background-color: #5d5fef;
+      background-color: #5d5fef !important;
     }
 
     .navbar-brand {
