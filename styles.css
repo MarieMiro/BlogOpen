@@ -125,19 +125,6 @@ position: relative;
             font-size: 48px;
         }
     }
-    
-#box {
-  width: 100px;
-  height: 100px;
-  background-color: steelblue;
-  position: relative;
-  margin-top: 20px;
-  transition: all 0.5s ease;
-}
-.animate {
-  transform: translateX(200px) rotate(360deg);
-  background-color: tomato;
-}
 button {
   padding: 10px 20px;
   font-size: 16px;
