@@ -2,7 +2,7 @@
 
     body {
       margin: 0;
-      background-color: #1c1c1c;
+      background: linear-gradient(180deg, #1c1c1c 0%, #202020 50%, 1a1a1a 100%);
       color: white;
       font-family: 'Segoe UI', sans-serif;
     }
@@ -113,7 +113,7 @@ position: relative;
 }
 .tagline {
   font-size: 18px;
-  color: #ffffff;
+  color: #ffffff !important;
   margin-top: 0px;
   font-weight: 400;
   line-height: 1.4;
@@ -370,6 +370,7 @@ button {
 }
       
   </style>
+
 
 
 
