@@ -2,7 +2,7 @@
 
     body {
       margin: 0;
-      background: linear-gradient(180deg, #1c1c1c 0%, #202020 50%, 1a1a1a 100%);
+      background: linear-gradient(180deg, #1c1c1c 0%, #202020 50%, 1a1a1a 100%) !important;
       color: white;
       font-family: 'Segoe UI', sans-serif;
     }
@@ -370,6 +370,7 @@ button {
 }
       
   </style>
+
 
 
 
